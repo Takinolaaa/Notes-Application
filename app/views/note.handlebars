@@ -1,0 +1,17 @@
+
+<div style="border-radius: 5px; background-color:#333333;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1) ;height: 700px; padding: 2em; margin-bottom: 2em; overflow: scroll;"class="container" >
+  <h1 style="color: white;">{{note.title}}</h1>
+  <p style="color: white;">{{note.note}}</p>
+</div>
+
+<a class="btn btn-primary" href="/edit/{{{note.key}}}">Edit</a>
+<a
+  class="btn btn-primary"
+  href="/delete/{{note.key}}"
+  onclick="onDelete(event)"
+>Delete</a>
+
+<script>
+  function onDelete(e) { if (!confirm('Are you sure you want to delete this Note?')) { e.preventDefault(); } }
+</script>
+

@@ -1,0 +1,11 @@
+
+<div  class="row">
+    {{#each note}}
+<div class="card text-light mb-1" style="overflow:hidden;background-color: #333333;  margin:0.6em;max-width: 18rem; height:18rem;  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);">
+  <div style="background-color:#333333" class="card-header"><a href="/note/{{key}}">{{title}}</a></div>
+  <div class="card-body">
+    <p class="card-text">{{note}}</p>
+  </div>
+</div>
+  {{/each}}
+</div>

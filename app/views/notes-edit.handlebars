@@ -1,0 +1,33 @@
+
+<div style="border-radius: 5px; background-color:#333333;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1) ;height: 700px; padding: 2em; margin-bottom: 2em; overflow: scroll;"class="container" >
+<form action="/note" method="POST">
+  {{#if editMode }}
+  <div  style="color:white" class="mb-3">
+    <label  for="key" class="form-label">Key:</label>
+    <input type="text" name="key" class="form-control" id="key" value="{{note.key}}" readonly>
+  </div>
+  {{/if}}
+  
+  <div  style="color:white" class="mb-3">
+    <label for="title" class="form-label">Title:</label>
+    <input type="text" name="title" class="form-control" id="title" value="{{note.title}}" placeholder="Title" maxlength="1000" required>
+  </div>
+
+  <div  style="color:white" class="mb-3">
+    <label for="note" class="form-label">Note: </label>
+    <textarea class="form-control" name="note" id="note" rows="10" maxlength="5000" required>{{note.note}}</textarea>
+  </div>
+
+  <div class="mb-3">
+    <button type="submit" class="btn btn-primary mb-3">
+        {{#if editMode }}
+          Update
+        {{else }}
+          Create
+        {{/if}}
+      </button>
+  </div>
+
+</form>
+
+</div>
